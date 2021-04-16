@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/a8eae0cf-dca2-4998-9aba-3e44f1c21d5f/resourceGroups/WordADay-Resource-Group-MOB/providers/Microsoft.Web/sites/WordADay",
+    "appService.deploySubpath": "."
+}

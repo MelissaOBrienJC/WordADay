@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { WordADayComponent } from './word-a-day/word-a-day.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WordADayComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,19 @@
+body {
+  overflow-x: hidden !important;
+
+
+}
+.container {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+.word-a-day-nav-logo-text {
+  color: black;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+.navbar-date{
+  color: #ff3b3f  !important;
+  font-variant: small-caps;
+}
+
