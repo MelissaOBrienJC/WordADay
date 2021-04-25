@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 import { Word } from './word';
 import data from './data.json';
 
@@ -8,16 +10,19 @@ import data from './data.json';
   styleUrls: ['./word-a-day.component.css'],
 })
 export class WordADayComponent implements OnInit {
-  constructor() {}
+  private ngUnsubscribe = new Subject();
+  constructor( ) {}
 
   todaysWord: Word;
   todaysDate: Date = new Date();
   words: any = (data as any).default;
   allWords: Word[];
+  audio : string
 
   ngOnInit(): void {
     this.initWords();
     this.todaysWord = this.getTodaysWord();
+    this.audio = 'https://wordtospeech.azurewebsites.net/api/TextToSpeech' + '?word=' + this.todaysWord.word
   }
 
   initWords(): void {
@@ -33,6 +38,7 @@ export class WordADayComponent implements OnInit {
     let dayNum = this.daysIntoYear(today);
     return this.allWords[dayNum - 1];
   }
+
 
   daysIntoYear(date): number {
     return (

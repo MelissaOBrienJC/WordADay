@@ -1,6 +1,6 @@
 # Angular Web Application WordADay
 
-Angular Web Application to teach a new word every day of the year. This application is hosted in Azure as an App Service.
+Angular Web Application to teach a new word every day of the year. This application is hosted in Azure as an App Service. Word pronunciation via Azure function utilizing Microsoft Cognitive services for speech.
 
 ## Demo
 
