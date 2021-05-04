@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
-import { takeUntil } from 'rxjs/operators';
 import { Word } from './word';
 import data from './data.json';
 
@@ -10,7 +9,6 @@ import data from './data.json';
   styleUrls: ['./word-a-day.component.css'],
 })
 export class WordADayComponent implements OnInit {
-  private ngUnsubscribe = new Subject();
   constructor( ) {}
 
   todaysWord: Word;
@@ -37,6 +35,18 @@ export class WordADayComponent implements OnInit {
     //let today = new Date(dateString);
     let dayNum = this.daysIntoYear(today);
     return this.allWords[dayNum - 1];
+  }
+
+  getRandomWord(): void {
+    let dayNum = this.getRandomInt(1,365)
+    this.todaysWord = this.allWords[dayNum - 1];
+    this.audio = 'https://wordtospeech.azurewebsites.net/api/TextToSpeech' + '?word=' + this.todaysWord.word
+  }
+
+  getRandomInt(min, max) : number{
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
 

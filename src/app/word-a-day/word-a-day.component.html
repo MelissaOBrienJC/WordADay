@@ -1,51 +1,65 @@
+
+<div class="row">
+
+
+  <div class="float-right">
+    <button type="button" class="btn text-right btn-outline-secondary btn-sm float-end "
+    (click)="getRandomWord()"
+    >Random Word</button>
+  </div>
 <div class="container">
-  <br />
-  <br />
-  <br />
+
+
+  </div>
+  <br class="responsive" />
+  <br class="responsive" />
+  <br class="responsive"/>
   <div class="row">
-    <div class="col-sm"></div>
-    <div class="col-6 h1 todays-word">
+    <div class="col-1 col-md-3"></div>
+    <div class="col-10 col-md-8 h1 todays-word">
       {{ todaysWord.word }}
     </div>
-    <div class="col-sm"></div>
+    <div class="col-1"></div>
   </div>
   <br />
   <div class="row">
-    <div class="col-sm"></div>
-    <div class="col-6 h6 header-text">Definition:</div>
-    <div class="col-sm"></div>
+    <div class="col-1 col-md-3"></div>
+    <div class="col-10 col-md-8 h6 header-text">Definition:</div>
+    <div class="col-1"></div>
   </div>
 
   <div class="row">
-    <div class="col-sm"></div>
-    <div class="col-6 h4">
+    <div class="col-1 col-md-3"></div>
+    <div class="col-10 col-md-8 h4">
       {{ todaysWord.definition }}
     </div>
-    <div class="col-sm"></div>
+    <div class="col-1"></div>
   </div>
   <br />
   <br />
 
   <div class="row">
-    <div class="col-sm"></div>
-    <div class="col-6 usage-text">
+    <div class="col-1 col-md-3"></div>
+    <div class="col-10 col-md-8 usage-text">
       <blockquote>
         <p class="quote">{{ todaysWord.usage }}</p>
         <br />
       </blockquote>
     </div>
-    <div class="col-sm"></div>
+    <div class="col-1"></div>
   </div>
 
   <br />
   <br />
   <div class="row">
-    <div class="col-sm"></div>
-    <div class="col-6 usage-text">
+    <div class="col-1 col-md-3"></div>
+    <div class="col-10 col-md-8 usage-text">
 
       <audio controls="" src="{{audio}}"></audio>
 
     </div>
-    <div class="col-sm"></div>
+    <div class="col-1"></div>
   </div>
+
+
 </div>

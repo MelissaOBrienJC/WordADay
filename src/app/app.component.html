@@ -8,17 +8,17 @@
     />
     <span class="word-a-day-nav-logo-text"> Word A Day </span>
   </a>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  <div class="collapse navbar-collapse ms-auto" id="navbarText">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
       <li class="nav-item">
-
       </li>
-
     </ul>
-    <span class="navbar-text navbar-date">
-      {{ todaysDate |  date:'fullDate' }}  &nbsp;
-    </span>
+
+
   </div>
+  <span class="navbar-text navbar-date">
+    {{ todaysDate |  date:'fullDate' }}  &nbsp;
+  </span>
 
  </nav>
 <router-outlet></router-outlet>

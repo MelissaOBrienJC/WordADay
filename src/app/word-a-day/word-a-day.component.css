@@ -1,72 +1,21 @@
-.tweettextreferenced {
-  font-size: 15px !important;
-}
-
-.tweettext {
-  font-size: 20px !important;
-  font-family: 14px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Ubuntu, "Helvetica Neue", sans-serif;
-}
-
-.tweetpanel {
-  padding: 15px;
-}
-.tweetusername {
-  color: grey;
-}
-
-.backdiv {
-  background-color: white;
-  padding: 20px;
-
-}
-.imageback {
-  background-repeat: repeat;
-  padding: 40px;
-}
-
-.pattern-carousel {
-  background-color: white;
-  width: 80%;
-}
-
-.background-controls {
-  width: 80%;
-}
-
-.col-centered {
-  float: none;
-  margin: 0 auto;
-}
-
-.grahic-pattern-image {
-  object-fit: cover;
-
-  width: 50px;
-  height: 50px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-.grahic-pattern-item-content {
-  border: 1px solid var(--surface-d);
-  border-radius: 3px;
-  margin: 0.3rem;
-  text-align: center;
-  padding: 2rem 0;
-}
-
 .header-text {
   color: #a9a9a9 !important;
   font-variant: small-caps !important;
 }
 
 .todays-word {
-  font-size: 60px !important;
+  font-size: 60px ;
 }
+@media screen and (max-width: 400px){
+    .todays-word {
+      font-size: 50px;
+    }
+  }
 
-.italic-text {
-  font-style: italic !important;
-}
+
+
+
+
 
 .usage-text blockquote {
   color: #444 !important;
@@ -101,8 +50,27 @@
   padding-bottom: 20px !important;
 }
 
+.btn {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+br.responsive {
+  display: inline;
+}
+
+@media (max-width: 400px) {
+  br.responsive {
+    display: none;
+  }
+}
+
+
+
 html,
 body {
   max-width: 100%;
+  margin-right: 10px;
+  margin-left: 10px;
   overflow-x: hidden !important;
 }
