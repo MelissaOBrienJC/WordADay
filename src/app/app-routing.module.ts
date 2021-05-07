@@ -7,9 +7,8 @@ const routes: Routes = [];
 @NgModule({
   imports: [
       RouterModule.forRoot([
-
     { path: '**', component: WordADayComponent }
-      ])
+], { relativeLinkResolution: 'legacy' })
   ],
   exports: [ RouterModule ]
 })

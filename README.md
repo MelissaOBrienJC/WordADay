@@ -13,8 +13,8 @@ Angular Web Application to teach a new word every day of the year. This applicat
 ## Versions
 
 ```
-Angular			: 9.1.13
+Angular			: 11.2.12
 Node			: 14.16.0
-Typescript		: 3.8.3
+Typescript		: 4.0.7
 
 ```
