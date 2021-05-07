@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { Word } from './word';
 import data from './data.json';
+import { SettingsService } from '../settings.service';
 
 @Component({
   selector: 'app-word-a-day',
@@ -9,15 +10,24 @@ import data from './data.json';
   styleUrls: ['./word-a-day.component.css'],
 })
 export class WordADayComponent implements OnInit {
-  constructor( ) {}
+
+
+
+
+  constructor(private settingsService: SettingsService ) {}
 
   todaysWord: Word;
   todaysDate: Date = new Date();
   words: any = (data as any).default;
   allWords: Word[];
   audio : string
+  quizMode: boolean;
+
 
   ngOnInit(): void {
+
+    this.quizMode = this.settingsService.getQuizMode();
+    console.log(this.quizMode);
     this.initWords();
     this.todaysWord = this.getTodaysWord();
     this.audio = 'https://wordtospeech.azurewebsites.net/api/TextToSpeech' + '?word=' + this.todaysWord.word
@@ -38,6 +48,19 @@ export class WordADayComponent implements OnInit {
   }
 
   getRandomWord(): void {
+
+
+    var element = document.getElementById('showDefButton') as HTMLElement;
+    if ( element)
+    {
+
+
+    var expanded = element.getAttribute('aria-expanded');
+    if ( expanded== "true")
+    {
+      element.click();   // hide definition
+    }
+  }
     let dayNum = this.getRandomInt(1,365)
     this.todaysWord = this.allWords[dayNum - 1];
     this.audio = 'https://wordtospeech.azurewebsites.net/api/TextToSpeech' + '?word=' + this.todaysWord.word

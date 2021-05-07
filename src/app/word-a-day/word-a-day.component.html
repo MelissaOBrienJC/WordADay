@@ -22,11 +22,15 @@
     <div class="col-1"></div>
   </div>
   <br />
+
+
+  <div *ngIf="!quizMode">
   <div class="row">
     <div class="col-1 col-md-3"></div>
     <div class="col-10 col-md-8 h6 header-text">Definition:</div>
     <div class="col-1"></div>
   </div>
+
 
   <div class="row">
     <div class="col-1 col-md-3"></div>
@@ -34,6 +38,8 @@
       {{ todaysWord.definition }}
     </div>
     <div class="col-1"></div>
+
+
   </div>
   <br />
   <br />
@@ -48,7 +54,40 @@
     </div>
     <div class="col-1"></div>
   </div>
+</div>
+  <div *ngIf="quizMode">
+    <div class="row">
+      <div class="col-1 col-md-3"></div>
+      <div class="col-10 col-md-8 ">
+        <p>
+          <a id="showDefButton" class="btn btn-light " data-bs-toggle="collapse" href="#collapseDefinition" role="button" aria-expanded="false" aria-controls="collapseDefinition">
+            <div class="header-text">
+            Definition &nbsp;
 
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path>
+              </svg></div>
+          </a>
+
+        </p>
+        <div id="collapseDefinition"  class="collapse" >
+          <div class="h4 card-definition">
+            {{ todaysWord.definition }}
+          </div>
+          <br />
+          <div class="usage-text">
+            <blockquote>
+              <p class="quote">{{ todaysWord.usage }}</p>
+              <br />
+            </blockquote>
+          </div>
+      </div>
+      <div class="col-1"></div>
+    </div>
+    </div>
+  </div>
+
+</div>
   <br />
   <br />
   <div class="row">
@@ -62,4 +101,6 @@
   </div>
 
 
-</div>
+
+
+

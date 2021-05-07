@@ -4,6 +4,10 @@
 }
 
 
+span
+{
+  white-space: pre;
+}
 
 html,
 body {

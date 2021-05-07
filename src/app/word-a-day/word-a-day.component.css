@@ -12,11 +12,11 @@
     }
   }
 
+.card-definition {
+  border: none;
 
 
-
-
-
+}
 .usage-text blockquote {
   color: #444 !important;
   background-color: white !important;
@@ -63,6 +63,17 @@ br.responsive {
   br.responsive {
     display: none;
   }
+}
+
+.custom-control {
+  position: relative;
+  display: block;
+  min-height: 1.5rem;
+
+  line-height: 7px;
+
+
+  padding-left: 1.5rem;
 }
 
 
