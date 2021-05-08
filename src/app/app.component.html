@@ -8,8 +8,53 @@
     />
     <span class="word-a-day-nav-logo-text"> Word A Day </span>
   </a>
+
+
+
+
+
+
+
   <div class="collapse navbar-collapse " id="navbarText">
   </div>
+  <div class="float-right">
+    <span class="flex-nowrap">
+    <button type="button" class="btn text-right btn-secondary btn-sm float-end "
+    (click)="randomWordClick()"
+    >Random Word</button>
+    </span>
+  </div>
+
+  &nbsp;&nbsp;
+
+  <div class="float-right">
+    <span class="flex-nowrap">
+    <button type="button" class="btn text-right btn-secondary btn-sm float-end "
+    (click)="prevWordClick()"
+    ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+    </svg></button>
+    </span>
+  </div>
+  &nbsp;
+  <div class="float-right">
+    <span class="flex-nowrap">
+    <button type="button" class="btn text-right btn-secondary btn-sm float-end "
+    (click)="todayWordClick()"
+    >Today's Word</button>
+    </span>
+  </div>
+  &nbsp;
+  <div class="float-right">
+    <span class="flex-nowrap">
+    <button type="button" class="btn text-right btn-secondary btn-sm float-end "
+    (click)="nextWordClick()"
+    ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+    </svg></button>
+    </span>
+  </div>
+  &nbsp;&nbsp;&nbsp;
   <span class="navbar-text navbar-date  flex-nowrap">
     {{ todaysDate |  date:'fullDate' }}  &nbsp;
   </span>

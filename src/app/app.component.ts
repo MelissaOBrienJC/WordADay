@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SettingsService } from './settings.service';
+import { SharedService } from './shared.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,28 +10,37 @@ export class AppComponent implements OnInit {
   title = 'word-a-day';
   todaysDate : Date = new Date();
   quizMode : boolean;
-  constructor(private settingsService: SettingsService ) {}
+  constructor(private settingsService: SettingsService, private sharedService:SharedService ) {}
 
   ngOnInit(): void {
     this.quizMode = this.settingsService.getQuizMode();
-    console.log(this.quizMode);
+  }
 
+  randomWordClick()
+  {
+        this.sharedService.sendRandomWordClickEvent();
+  }
+
+  todayWordClick()
+  {
+        this.sharedService.sendTodayWordClickEvent();
+  }
+
+  prevWordClick()
+  {
+        this.sharedService.sendPrevWordClickEvent();
+  }
+
+  nextWordClick()
+  {
+        this.sharedService.sendNextWordClickEvent();
   }
 
   quizModeClick(ev: any)
   {
-    console.log ( 'quizModeclick');
-    console.log(ev);
     this.quizMode = ev.target.checked;
-
-
-    console.log(this.quizMode);
     this.settingsService.setQuizMode(this.quizMode);
-
-
-
-
-  window.location.reload();
+    window.location.reload();
   }
 
 }
